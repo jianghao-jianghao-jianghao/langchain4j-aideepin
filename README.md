@@ -63,7 +63,7 @@ AIDEEPIN
 |----------| :----- | :------- | ------ | -------- | ---------- | ---------- |---------| ------------- |
 | 灵积       | ✓   | ✓     |      |        | ✓       | ✓       | ✓       | ✓          |
 | OpenAI   | ✓   | ✓     | ✓   | ✓     |          |          |         |             |
-| 硅基流动     | ✓   | ✓       |      |        |          |        ✓  |         | ✓          |
+| 硅基流动     | ✓   | ✓       |      |        |          |        ✓  |   ✓     | ✓          |
 | Ollama   | ✓   |        |      |        |          |          |         |             |
 | DeepSeek | ✓   |        |      |        |          |          |         |             |
 | 千帆       | ✓   |        |      |        |          |          |         |             |
@@ -186,10 +186,24 @@ ps: neo4j 与 pgvector + apache age 二选一即可
   docker build . -t aideepin:0.0.1
   docker run -d \
     --name=aideepin \
+    -p 8888:9999 \
     -e APP_PROFILE=[dev|prod] \
     -v="/data/aideepin/logs:/data/logs" \
     aideepin:0.0.1
   ```
+## 贡献指南
+欢迎任何形式的贡献，包括但不限于：
+* 提交 Bug 报告
+* 提出功能建议
+* 改进文档
+* 提交代码（PR）
+
+代码提交流程：
+1. Fork 本仓库
+1. 创建特性分支 (git checkout -b feature/xxx)
+1. 提交更改 (git commit -m 'feat: xxx')
+1. 推送分支 (git push origin feature/xxx)
+1. 提交 Pull Request
 
 ## 截图
 
